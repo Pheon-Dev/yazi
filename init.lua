@@ -1,5 +1,7 @@
 require("full-border"):setup()
 
+-- require("smart-filter"):setup()
+
 function Status:name()
 	local h = cx.active.current.hovered
 	if not h then
