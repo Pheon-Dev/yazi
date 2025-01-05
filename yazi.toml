@@ -63,11 +63,11 @@ rules = [
 
   { mime = "application/zip", use = ["extract", "reveal"] },
   { mime = "application/gzip", use = ["extract", "reveal"] },
-  { mime = "application/x-tar", use = ["extract", "reveal"] },
-  { mime = "application/x-bzip", use = ["extract", "reveal"] },
-  { mime = "application/x-bzip2", use = ["extract", "reveal"] },
-  { mime = "application/x-7z-compressed", use = ["extract", "reveal"] },
-  { mime = "application/x-rar", use = ["extract", "reveal"] },
+  { mime = "application/tar", use = ["extract", "reveal"] },
+  { mime = "application/bzip", use = ["extract", "reveal"] },
+  { mime = "application/bzip2", use = ["extract", "reveal"] },
+  { mime = "application/7z-compressed", use = ["extract", "reveal"] },
+  { mime = "application/rar", use = ["extract", "reveal"] },
   { mime = "application/xz", use = ["extract", "reveal"] },
 
   { mime = "*", use = ["open", "reveal"] },
@@ -98,12 +98,12 @@ prepend_previewers = [
   # Archive previewer
   { mime = "application/*zip", run = "ouch" },
   { mime = "application/gzip", run = "ouch" },
-  { mime = "application/x-tar", run = "ouch" },
-  { mime = "application/x-bzip", run = "ouch" },
-  { mime = "application/x-bzip2", run = "ouch" },
-  { mime = "application/x-7z-compressed", run = "ouch" },
-  { mime = "application/x-rar", run = "ouch" },
-  { mime = "application/x-xz", run = "ouch" },
+  { mime = "application/tar", run = "ouch" },
+  { mime = "application/bzip", run = "ouch" },
+  { mime = "application/bzip2", run = "ouch" },
+  { mime = "application/7z-compressed", run = "ouch" },
+  { mime = "application/rar", run = "ouch" },
+  { mime = "application/xz", run = "ouch" },
 ]
 
 previewers = [
@@ -142,7 +142,7 @@ cd_origin = "top-center"
 cd_offset = [0, 2, 50, 3]
 
 # create
-create_title = "Create:"
+create_title = ["Create:", "Create (dir):"]
 create_origin = "top-center"
 create_offset = [0, 2, 50, 3]
 

@@ -1,8 +1,8 @@
-require("full-border"):setup()
+-- require("full-border"):setup()
 
 -- require("smart-filter"):setup()
 
-function Status:name()
+--[[ function Status:name()
 	local h = cx.active.current.hovered
 	if not h then
 		return ui.Span("")
@@ -13,4 +13,4 @@ function Status:name()
 	end
 
 	return ui.Span(" " .. h.name .. linked)
-end
+end ]]

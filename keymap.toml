@@ -37,11 +37,11 @@ keymap = [
   { on = ["G"], run = "arrow 99999999", desc = "Move cursor to the bottom" },
 
   # Selection
-  { on = ["<Space>"], run = ["select --state=none", "arrow 1"], desc = "Toggle the current selection state" },
+  { on = ["<Space>"], run = ["toggle", "arrow 1"], desc = "Toggle the current selection state" },
   { on = ["v"], run = "visual_mode", desc = "Enter visual mode (selection mode)" },
   { on = ["V"], run = "visual_mode --unset", desc = "Enter visual mode (unset mode)" },
-  { on = ["<C-a>"], run = "select_all --state=true", desc = "Select all files" },
-  { on = ["<C-r>"], run = "select_all --state=none", desc = "Inverse selection of all files" },
+  { on = ["<C-a>"], run = "toggle_all --state=on", desc = "Select all files" },
+  { on = ["<C-r>"], run = "toggle_all", desc = "Inverse selection of all files" },
 
   # Operation
   { on = ["o"], run = "open", desc = "Open the selected files" },
@@ -66,7 +66,7 @@ keymap = [
   { on = ["<C-s>"], run = "search none", desc = "Cancel the ongoing search" },
   { on = ["z"], run = "jump zoxide", desc = "Jump to a directory using zoxide" },
   { on = ["Z"], run = "jump fzf", desc = "Jump to a directory, or reveal a file using fzf" },
-  { on = ["<C-t>"], run = '''shell "$SHELL" --block --confirm''', desc = "Open shell here" },
+  { on = ["<C-t>"], run = '''shell "$SHELL" --block''', desc = "Open shell here" },
 
   # Linemode
   { on = ["m", "s"], run = "linemode size", desc = "Set linemode to size" },
@@ -256,8 +256,8 @@ keymap = [
 ]
 
 [[manager.prepend_keymap]]
-on   = [ "l" ]
-run  = "plugin --sync smart-enter"
+on   = "l"
+run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
 [[manager.prepend_keymap]]

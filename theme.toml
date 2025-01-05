@@ -59,7 +59,7 @@ title    = {}
 value    = {}
 selected = { reversed = true }
 
-[select]
+[pick]
 border   = { fg = "#89b4fa" }
 active   = { fg = "#f5c2e7" }
 inactive = {}
